@@ -79,11 +79,15 @@ https://www.wireshark.org/#downloadLink
 # NMAP
 https://nmap.org/download.html
 
+
 # NCAP
 https://npcap.com/
 
 # Metasploit-Framework
 https://www.metasploit.com/
+
+# Armitage
+https://www.offsec.com/metasploit-unleashed/armitage/
 
 # Nessus
 https://community.tenable.com/s/article/Nessus-Essentials?language=en_US
@@ -100,7 +104,39 @@ https://www.winpcap.org/windump/
 # Maltego
 https://www.maltego.com/
 
+# GRASSMARLIN
+https://github.com/nsacyber/GRASSMARLIN
+https://sourceforge.net/projects/grassmarlin.mirror/
 
+# SHODAN
+https://www.shodan.io/
+
+# GHDB
+https://www.exploit-db.com/google-hacking-database
+
+# TheDude (MIKROTIC The Dude)
+https://softfamous.com/the-dude/download/
+
+# OpenVAS
+https://www.openvas.org/
+
+# Nikto
+https://cirt.net/Nikto2
+
+# OWASP-ZAP
+https://www.stationx.net/owasp-zap-tutorial/
+
+# ENCASE
+https://www.opentext.com/products/forensic
+
+
+## Image/Container Based
+
+# Trivy
+https://trivy.dev/latest/
+
+# Kube-Bench
+https://github.com/aquasecurity/kube-bench
 
 ## CISA CSET
 https://github.com/cisagov/cset/releases
@@ -109,3 +145,9 @@ https://github.com/cisagov/cset/releases
 # Tools list for Penetration Testing
 https://online.yu.edu/katz/blog/best-kali-linux-tools-for-hacking-penetration-testing
 
+
+### Kali Multi-Monitor
+https://forums.kali.org/archived/showthread.php?26887-SOLVED-Kali-Linux-laptop-lid-close-actions
+edit file: `/etc/systemd/logind.conf`
+Just uncomment the "HandleLidSwitch=suspend" and change 'suspend' to the most appropriate option (ignore,halt,poweroff,kexec,hibernate,reboot,lock).
+restart service: `systemctl restart systemd-logind`

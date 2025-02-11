@@ -30,6 +30,7 @@ nmap -sS -sU -O -p- 192.168.1.0/24
 	-sS: Keeps the stealthy TCP SYN scan.
 	-p-: Scans all TCP and UDP ports.
 
+
 #Detect Live Hosts Before Scanning (Faster)
 nmap -sn 192.168.1.0/24
 nmap -O -sS -p- -iL live_hosts.txt
