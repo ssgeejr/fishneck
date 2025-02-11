@@ -147,6 +147,8 @@ https://online.yu.edu/katz/blog/best-kali-linux-tools-for-hacking-penetration-te
 
 
 ### Kali Multi-Monitor
+First open "Display" and enable [x] Mirror
+
 https://forums.kali.org/archived/showthread.php?26887-SOLVED-Kali-Linux-laptop-lid-close-actions
 edit file: `/etc/systemd/logind.conf`
 Just uncomment the "HandleLidSwitch=suspend" and change 'suspend' to the most appropriate option (ignore,halt,poweroff,kexec,hibernate,reboot,lock).

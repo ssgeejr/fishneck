@@ -1,4 +1,7 @@
 
+
+
+
 #This is fast and effective for local subnet discovery:
 nmap -sn -PR 192.168.1.0/24
 #	-sn: Disables port scanning, only discovers live hosts.
