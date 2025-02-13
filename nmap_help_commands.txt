@@ -1,6 +1,10 @@
 
-
-
+# See what's what on the network
+nmap -sn 192.168.0.0/24 -oG nmap_output
+ 
+ 
+ 
+ 
 
 #This is fast and effective for local subnet discovery:
 nmap -sn -PR 192.168.1.0/24

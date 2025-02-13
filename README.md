@@ -107,6 +107,14 @@ https://www.maltego.com/
 # GRASSMARLIN
 https://github.com/nsacyber/GRASSMARLIN
 https://sourceforge.net/projects/grassmarlin.mirror/
+https://www.infosecinstitute.com/resources/scada-ics-security/situational-awareness-ics-using-grass-marlin/
+https://www.osti.gov/servlets/purl/1409972
+https://github.com/nsacyber/GRASSMARLIN/blob/master/GRASSMARLIN_Briefing_20170210.pptx
+
+```
+	wget https://github.com/nsacyber/GRASSMARLIN/releases/download/v3.2.1/grassmarlin_3.2.1.kali-1_amd64.deb
+	sudo apt install ./grassmarlin_3.2.1.kali-1_amd64.deb
+```
 
 # SHODAN
 https://www.shodan.io/
