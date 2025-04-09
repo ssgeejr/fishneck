@@ -100,6 +100,7 @@ https://appsource.microsoft.com/en-us/product/web-apps/microolap.tcpdump?tab=ove
 
 # WINDump
 https://www.winpcap.org/windump/
+https://github.com/hsluoyz/WinDump
 
 # Maltego
 https://www.maltego.com/
@@ -118,6 +119,21 @@ https://github.com/nsacyber/GRASSMARLIN/blob/master/GRASSMARLIN_Briefing_2017021
 
 # SHODAN
 https://www.shodan.io/
+
+#GreyNoise
+https://viz.greynoise.io/
+
+#BinaryEdge
+https://www.binaryedge.io/
+
+#Netlas
+https://netlas.io/
+
+#ZoomEye
+https://www.zoomeye.ai/
+
+#Censys
+https://censys.com/
 
 # GHDB
 https://www.exploit-db.com/google-hacking-database
@@ -161,3 +177,20 @@ https://forums.kali.org/archived/showthread.php?26887-SOLVED-Kali-Linux-laptop-l
 edit file: `/etc/systemd/logind.conf`
 Just uncomment the "HandleLidSwitch=suspend" and change 'suspend' to the most appropriate option (ignore,halt,poweroff,kexec,hibernate,reboot,lock).
 restart service: `systemctl restart systemd-logind`
+
+
+Helpful commands
+
+meterpreter ... search
+
+
+https://blog.didierstevens.com/2017/08/14/using-metasploit-on-windows/
+
+https://www.youtube.com/watch?v=2ssKmTPxLh0&ab_channel=CloudSecurityTraining%26Consulting
+
+
+
+
+
+
+
