@@ -1,0 +1,15 @@
+
+Zenmap (Nmap’s Official GUI)
+
+Nmap-Parser with Graphviz
+
+SolarWinds Network Topology Mapper (NTM)
+
+
+
+
+
+nmap -T4 -A -v 192.168.1.0/24
+
+Export for zenmap in xml format
+nmap -T4 -A -v -oX server_scan.xml 192.168.1.0/24
