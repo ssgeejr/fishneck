@@ -1,0 +1,97 @@
+
+Alternate Tools:
+	https://www.kismetwireless.net/
+	https://www.bettercap.org/
+
+
+ifconfig
+Identify interface name: Use ifconfig to find the name of your wireless interface.
+
+You should see something like: 
+--------------------------------------------------------------------------------
+	└─$ ifconfig
+	lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+			inet 127.0.0.1  netmask 255.0.0.0
+			inet6 ::1  prefixlen 128  scopeid 0x10<host>
+			loop  txqueuelen 1000  (Local Loopback)
+			RX packets 92  bytes 7408 (7.2 KiB)
+			RX errors 0  dropped 0  overruns 0  frame 0
+			TX packets 92  bytes 7408 (7.2 KiB)
+			TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+	wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+			inet 192.168.10.6  netmask 255.255.255.0  broadcast 192.168.10.255
+			inet6 fe80::6fa8:7467:f89a:243d  prefixlen 64  scopeid 0x20<link>
+			ether 3c:21:9c:b7:f3:45  txqueuelen 1000  (Ethernet)
+			RX packets 54089  bytes 49642294 (47.3 MiB)
+			RX errors 0  dropped 0  overruns 0  frame 0
+			TX packets 24351  bytes 2936884 (2.8 MiB)
+			TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+	wlan1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+			ether 12:de:b0:51:a1:f6  txqueuelen 1000  (Ethernet)
+			RX packets 0  bytes 0 (0.0 B)
+			RX errors 0  dropped 0  overruns 0  frame 0
+			TX packets 0  bytes 0 (0.0 B)
+			TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+--------------------------------------------------------------------------------
+
+
+wlan1 is what you're looking for ... 
+
+
+
+iwconfig
+Check interface mode: Run iwconfig to determine if the interface is in managed mode or monitor mode.
+
+--------------------------------------------------------------------------------
+	└─$ iwconfig
+	lo        no wireless extensions.
+
+	wlan0     IEEE 802.11  ESSID:"814N_5G"
+			  Mode:Managed  Frequency:5.18 GHz  Access Point: 14:EA:A1:23:A9:17
+			  Bit Rate=866.7 Mb/s   Tx-Power=22 dBm
+			  Retry short limit:7   RTS thr:off   Fragment thr:off
+			  Power Management:on
+			  Link Quality=62/70  Signal level=-48 dBm
+			  Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+			  Tx excessive retries:0  Invalid misc:16   Missed beacon:0
+
+	wlan1     IEEE 802.11  ESSID:off/any
+			  Mode:Managed  Access Point: Not-Associated   Tx-Power=20 dBm
+			  Retry short  long limit:2   RTS thr:off   Fragment thr:off
+			  Power Management:off
+--------------------------------------------------------------------------------
+
+sudo airmon-ng check
+sudo airmon-ng check kill
+airmon-ng start 
+airodump-ng <interface>
+
+	args:
+		-c  		listen on for a given channel
+		--bssid		limit capture to a specific AP
+		-w 	<file>	save capture data the file 
+
+
+--------------------------------------------------------------------------------
+	└─$ sudo airmon-ng check
+
+	Found 2 processes that could cause trouble.
+	Kill them using 'airmon-ng check kill' before putting
+	the card in monitor mode, they will interfere by changing channels
+	and sometimes putting the interface back in managed mode
+
+		PID Name
+		775 NetworkManager
+		826 wpa_supplicant
+--------------------------------------------------------------------------------
+
+This will kill them: sudo airmon-ng check kill
+
+Now you are safe to bring the antenna online:
+	airmon-ng start 
+
+And to finally, start scanning:
+	airodump-ng <interface>
+
